@@ -1,1 +1,85 @@
-.home {}
+// Home
+.home .intro-content {
+
+    .entry-content {
+
+        @include border($color: $color__secondary, $weight: 4px, $style: solid, $space: 2em);
+        @include border($position: top, $color: $color__secondary, $weight: 4px, $style: solid, $space: 2em);
+
+        margin-bottom: 0;
+
+        img {
+            display: none;
+        }
+
+        p {
+            @include font-size($h5);
+        }
+
+        h1 {
+            @include font-size($h3);
+        }
+
+        .button {
+            margin-top: .5em;
+        }
+
+    }
+
+}
+
+@include breakpoint(md) {
+
+    .home .intro-content {
+
+        .entry-content {
+            display: flex;
+            padding: 2em;
+
+            h1 {
+                margin-top: 0;
+                @include font-size($h1);
+            }
+
+            p {
+                @include font-size($h4);
+            }
+
+            .image {
+                flex: 1 0 200px;
+                padding-right: 2em;
+            }
+
+            .text {
+                flex: 1 0 calc(100% - 200px);
+            }
+
+            img {
+                display: inherit;
+                width: 100%;
+
+                height: auto;
+            }
+        }
+
+    }
+
+    .home-widgets {
+
+        p {
+            @include font-size($h4);
+        }
+
+        h2 {
+            @include font-size($h2);
+        }
+
+        .widget-first {
+            padding-top: 0;
+        }
+
+    }
+    
+}
+
+
