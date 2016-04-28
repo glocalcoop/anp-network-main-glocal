@@ -17,10 +17,11 @@
     }
     .sow-more-text a {
         @include button($bg-color: $color__default);
-    }
-    .sow-more-text a:hover,
-    .sow-more-text a:focus {
-        @include button($bg-color: darken($color__default, 10%));
+
+        &:hover,
+        &:focus {
+           background-color: darken($color__default, 10%); 
+        }
     }
  }
 
